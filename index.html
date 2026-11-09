@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ExpenseTracker</title>
+</head>
+<body>
+    <header class="header">
+        <div class="content row between">
+            <div class="balance row">
+                <li>Balance: </li>
+                <li>0.00</li>
+            </div>
+            <ul class="menu row">
+                <li>Dashboard</li>
+                <li>Transactions</li>
+                <li>Statistics</li>
+                <li>Categories</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <h1 class="center">Your finance</h1>
+            <div class="finance center column">
+                <div class="row around">
+                    <div class="dateCenter row around">
+                        <div class="dateElem row center">
+                            <h4>From:</h4>
+                            <input type="date">
+                        </div>
+                        <div class="dateElem row center">
+                            <h4> to: </h4>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="sorting row center">
+                        <h4>Sort by:</h4>
+                        <select name="" id=""></select>
+                    </div>
+                </div>
+                <div class="operationLists center">
+                    <div class="incoming">
+                        <div class="row">
+                            <h3>Incoming</h3>
+                            <input class="addButton" id="addIncoming" type="button" value="+Add new" title="+Add">
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="expenses">
+                        <div class="row">
+                            <h3>Expenses</h3>
+                            <input class="addButton" id="addExpenses" type="button" value="+Add new">
+                        </div>
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

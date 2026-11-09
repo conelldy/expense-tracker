@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5{
+    color: rgb(252, 240, 240);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: rgb(24, 24, 24);
+}
+.content{
+    max-width: 900px;
+    margin: auto;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+li{
+    color: rgb(252, 240, 240);
+    list-style-type: none;
+    padding: 5px;
+}
+h1{
+    padding-top: 7%;
+}
+.finance{
+    padding-top: 2%;
+}
+.operationLists{
+    padding-top: 3%;
+}
+.dateElem,
+.dateCenter,
+.sorting{
+    width: 50%;
+}
+.incoming,
+.expenses{
+    margin: auto;
+}
+.addButton{
+    margin: 5px;
+
+}
