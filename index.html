@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
     <title>ExpenseTracker</title>
 </head>
 <body>
     <header class="header">
         <div class="content row between">
-            <div class="balance row">
+            <ul class="balance row">
                 <li>Balance: </li>
                 <li>0.00</li>
-            </div>
+            </ul>
             <ul class="menu row">
                 <li>Dashboard</li>
                 <li>Transactions</li>
@@ -23,7 +24,54 @@
     </header>
     <main>
         <div class="content">
-            <h1 class="center">Your finance</h1>
+            <h1 class="center">Your finance list</h1>
+            <div class="addingTransaction column">
+                <h2 class="center">Add new transaction</h2>
+                <div class="addingForm column">
+                    <div class="paramOfTransaction row center ">
+                        <h4>Title of transaction: </h4>
+                        <input type="text" placeholder="Title" id="transTitle">
+                    </div>
+                    <div class="paramOfTransaction row center">
+                        <h4>Type of transaction: </h4>
+                        <select id="transType">
+                            <option value="basic" disabled selected>Select type</option>
+                            <option value="income">Incomes</option>
+                            <option value="expense">Expenses</option>
+                        </select>
+                    </div>
+                    <div class="paramOfTransaction row center">
+                        <h4>Category of transaction: </h4>
+                        <select id="transCategoryIncome">
+                            <option value="basic" disabled selected>For incomes</option>
+                            <option value="business">Business</option>
+                            <option value="salary">Salary</option>
+                            <option value="investments">Investments</option>
+                            <option value="gift">Gift</option>
+                        </select>
+                        <select id="transCategoryExpense">
+                            <option value="basic" disabled selected>For expenses</option>
+                            <option value="food">Food</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="investments">Investments</option>
+                            <option value="gift">Gift</option>
+                        </select>
+                    </div>
+                    <div class="paramOfTransaction row center">
+                        <h4>Date of transaction: </h4>
+                        <input type="date" id="transDate">
+                    </div>
+                    <div class="paramOfTransaction row center">
+                        <h4>Amount of transaction: </h4>
+                        <input type="number" placeholder="Amount($)" id="transAmount">
+                        <h4>$</h4>
+                    </div>
+                    <div class="buttonAddTransactionToList center paramOfTransaction">
+                        <button onclick="addTransaction()">Add transaction</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="finance center column">
                 <div class="row around">
                     <div class="dateCenter row around">
@@ -43,17 +91,11 @@
                 </div>
                 <div class="operationLists center">
                     <div class="incoming">
-                        <div class="row">
-                            <h3>Incoming</h3>
-                            <input class="addButton" id="addIncoming" type="button" value="+Add new" title="+Add">
-                        </div>
+                        <h2>Incoming</h2>
                         <ul></ul>
                     </div>
                     <div class="expenses">
-                        <div class="row">
-                            <h3>Expenses</h3>
-                            <input class="addButton" id="addExpenses" type="button" value="+Add new">
-                        </div>
+                        <h2>Expenses</h2>
                         <ul></ul>
                     </div>
                 </div>
